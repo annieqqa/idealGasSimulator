@@ -2,7 +2,7 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 class parSys():
-    def __init__(self, N=2, T=298, dt=0.1, l=1, w=1, h=1):
+    def __init__(self, N=10, T=298, dt=0.1, l=1, w=1, h=1):
         self.N = N # number of particles
         self.T = T # temperature
         self.dt = dt # time step
@@ -73,4 +73,5 @@ if __name__ == '__main__':
     ax.set_ylim(0, ps.w)
     ps.initialize_particles()
     ani = animation.FuncAnimation(fig, run, frames=num_steps, interval=10)
+    ani.save('animation.gif', fps=2)
     plt.show()

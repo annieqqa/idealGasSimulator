@@ -79,4 +79,4 @@ if __name__ == '__main__':
     num_step = 100
     ani = animation.FuncAnimation(fig, run, num_step, interval=10)
     plt.show()
-    ani.save('animation1.gif', fps=2)
+    ani.save('animation.gif', fps=2)
